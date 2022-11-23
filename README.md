@@ -1,4 +1,5 @@
 # Ardufacil C++
+[![Create release](https://github.com/talesprado/ardufacil-cpp/actions/workflows/main.yml/badge.svg)](https://github.com/talesprado/ardufacil-cpp/actions/workflows/main.yml)
 
 Este repositório contém os arquivos da biblioteca C++ para ser utilizada em programação Arduino.
 Esta biblioteca oferece métodos para:
