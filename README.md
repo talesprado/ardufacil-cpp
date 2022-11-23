@@ -40,3 +40,32 @@ Ao utilizar os métodos presentes nesta biblioteca para adicionar variávieis e 
     digitalWrite(LED_BUILTIN, LOW);
   }
  ```
+ 
+ ## Assinaturas de métodos
+ Os seguintes métodos públicos podem ser utilizados 
+ 
+ ### addVariable
+ Este método adiciona uma variável configurável ao objeto Experiment.
+ ```
+ template <typename T>
+ void addVariable(String name, String label, T defaultValue);
+ ```
+ Como é possível ver na assinatura acima, este método utiliza um template para o tipo de dado do parâmetro defaultValue. 
+ Isto significa que o tipo da variável configurável deve ser fornecido no momento que é o método é chamado como abaixo:
+ ```
+ xp.addVariable<boolean>("var1", "Energia eletrica", false);
+ ```
+ No momento apenas <int> e <boolean> são aceitos como parâmetros
+ 
+ ### addSensor
+ Este método adiciona um sensor ao objeto Experiment. Após adicionado, a leitura do valor do pino será feita dentro do método updateExperiment().
+ ```
+ void addSensor(int pin, String name, int value);
+ ```
+ 
+ ### updateExperiment
+Este método escuta a porta serial para identificar se houve uma solicitação de valores das variáveis e sensores, uma solicitação para alterar o valor de algum dos 
+ parâmetros do métodos ou uma solicitação para salvar os valores atuais na EEPROM.
+ ```
+ void updateExperiment();
+ ```
