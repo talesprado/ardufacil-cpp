@@ -7,7 +7,6 @@ Esta biblioteca oferece métodos para:
 - atualização de variávies
 - recuperar valor de uma variável
 - leitura de valores de sensores
-- 
 
 ## Para que utilizar esta biblioteca
 Ao utilizar os métodos presentes nesta biblioteca para adicionar variávieis e sensores, ela permitirá que os valores dos sensores sejam lidos e os valores das variáveis sejam atualizados por uma página web.
